@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PilotageManuel">
+
+    <me.tankery.lib.circularseekbar.CircularSeekBar
+        android:id="@+id/seek_bar_altitude"
+        android:layout_width="242dp"
+        android:layout_height="240dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="84dp"
+        app:cs_circle_color="@color/colorGray"
+        app:cs_circle_progress_color="@color/colorBlue"
+        app:cs_circle_stroke_width="4dp"
+        app:cs_circle_style="butt"
+        app:cs_end_angle="0"
+        app:cs_negative_enabled="false"
+        app:cs_pointer_angle="5"
+        app:cs_pointer_color="@color/colorBlue"
+        app:cs_pointer_stroke_width="48dp"
+        app:cs_start_angle="-180"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.464"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seek_bar_azimute"
+        app:layout_constraintVertical_bias="0.016" />
+
+    <me.tankery.lib.circularseekbar.CircularSeekBar
+        android:id="@+id/seek_bar_azimute"
+        android:layout_width="242dp"
+        android:layout_height="240dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:cs_circle_color="@color/colorGray"
+        app:cs_circle_progress_color="@color/colorBlue"
+        app:cs_circle_stroke_width="4dp"
+        app:cs_circle_style="butt"
+        app:cs_end_angle="180"
+        app:cs_negative_enabled="false"
+        app:cs_pointer_angle="5"
+        app:cs_pointer_color="@color/colorBlue"
+        app:cs_pointer_stroke_width="48dp"
+        app:cs_start_angle="-180"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Azimute"
+        app:layout_constraintBottom_toBottomOf="@+id/seek_bar_azimute"
+        app:layout_constraintEnd_toEndOf="@+id/seek_bar_azimute"
+        app:layout_constraintStart_toStartOf="@+id/seek_bar_azimute"
+        app:layout_constraintTop_toBottomOf="@+id/text_progress_azimute"
+        app:layout_constraintVertical_bias="0.51" />
+    <TextView
+        android:id="@+id/text_progress_azimute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0°"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/seek_bar_azimute"
+        app:layout_constraintEnd_toEndOf="@+id/seek_bar_azimute"
+        app:layout_constraintStart_toStartOf="@+id/seek_bar_azimute"
+        app:layout_constraintTop_toTopOf="@+id/seek_bar_azimute" />
+
+    <TextView
+        android:id="@+id/text_progress_altitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0°"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/seek_bar_altitude"
+        app:layout_constraintEnd_toEndOf="@+id/seek_bar_altitude"
+        app:layout_constraintStart_toStartOf="@+id/seek_bar_altitude"
+        app:layout_constraintTop_toTopOf="@+id/seek_bar_altitude" />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="174dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3">
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:text="Autonome"
+            tools:layout_editor_absoluteX="191dp"
+            tools:layout_editor_absoluteY="369dp" />
+
+        <Switch
+            android:id="@+id/switchBtn"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+
+            tools:layout_editor_absoluteX="256dp"
+            tools:layout_editor_absoluteY="369dp" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="26dp"
+            android:autoText="false"
+            android:text="Manuel"
+            tools:layout_editor_absoluteX="295dp"
+            tools:layout_editor_absoluteY="369dp" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Altitude"
+        app:layout_constraintBottom_toBottomOf="@+id/seek_bar_altitude"
+        app:layout_constraintEnd_toEndOf="@+id/seek_bar_altitude"
+        app:layout_constraintStart_toStartOf="@+id/seek_bar_altitude"
+        app:layout_constraintTop_toBottomOf="@+id/text_progress_altitude" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/flag" />
+    <ImageView
+        android:id="@+id/config"
+        android:layout_width="31dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/config" />
+
+</android.support.constraint.ConstraintLayout>
